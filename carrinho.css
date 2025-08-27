@@ -1,0 +1,111 @@
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    min-width: 600px; /* garante espaço mínimo em mobile com scroll horizontal */
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid slategray;
+}
+
+th {
+    background-color: #7dc7fc;
+    font-weight: bold;
+    color: white;
+}
+
+input.quantidades {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+button.remover-produto {
+    background-color: rgb(58, 148, 252);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.remover-produto:hover {
+    background-color: rgb(18, 1, 87);
+}
+
+.total-final {
+    text-align: right;
+    margin-top: 25px;
+}
+
+.total-final h3 {
+    color: #000;
+}
+
+.produto1,
+.produto2 {
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    table {
+        min-width: unset;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    input.quantidades {
+        width: 50px;
+    }
+
+    .produto1,
+    .produto2 {
+        width: 70px;
+    }
+
+    .total-final {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    button.remover-produto {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .produto1,
+    .produto2 {
+        width: 60px;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página de Carrinho</title>
+  <link rel="icon" href="../img/niki.jpg"/>
+  <link rel="stylesheet" href="../css/carrinho.css"/>
+  <link rel="manifest" href="manifest.json"/>
+</head>
+
+<body>
+<main>
+  <section class="carrinho">
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Preço unitário</th>
+          <th>Total</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img class="produto1" src="../img/images.jpg" alt="Produto 1"></td>
+          <td><input type="number" value="1" min="1" class="quantidades"/></td>
+          <td class="preco-unitario">R$95,00</td>
+          <td class="preco-total">R$95,00</td>
+          <td><button class="remover-produto">Remover</button></td>
+        </tr>
+        <tr>
+          <td><img class="produto2" src="../img/Frank-Ocean-Face-Screenprinted-T-Shirt_a11fd190-bcf8-4735-ac54-90e2c152de7e.327a10d13af75df7e3122b6d807c3abe.webp" alt="Produto 2"></td>
+          <td><input type="number" value="2" min="1" class="quantidades"/></td>
+          <td class="preco-unitario">R$78,00</td>
+          <td class="preco-total">R$156,00</td>
+          <td><button class="remover-produto">Remover</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total-final">
+      <h3>Total Final: <span id="total-final">R$251,00</span></h3>
+    </div>
+  </section>
+</main>
+
+<script src="../app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(() => console.log('Service Worker registrado!'))
+      .catch(error => console.error('Erro ao registrar SW:', error));
+  }
+</script>
+</body>
+</html>
